@@ -1,13 +1,16 @@
 <template>
+	<CoffeeTable />
   <CreateCoffeeForm />
 </template>
 
 <script>
+import CoffeeTable from './components/CoffeeTable.vue'
 import CreateCoffeeForm from './components/CreateCoffeeForm.vue'
 
 export default {
   name: 'App',
   components: {
+		CoffeeTable,
 		CreateCoffeeForm
   }
 }

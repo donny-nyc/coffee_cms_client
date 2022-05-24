@@ -35,7 +35,10 @@
 		methods: {
 			createCoffee() {
 				axios.post('http://127.0.0.1:43210/api/coffee', this.formData)
-				.then(response => console.log(response))
+				.then(response => {
+					console.log(response)
+					this.emitter.emit('refreshCoffeeTable')
+				})
 				.catch(error => console.log(error))
 			}
 		}
